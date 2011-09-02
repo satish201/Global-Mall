@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
  layout 'user'
   
-  #before_filter :require_user_admin
+  before_filter :require_user_admin
   
   
   def index
