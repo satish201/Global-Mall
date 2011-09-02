@@ -1,0 +1,16 @@
+<!--div style="color: black; background-color:white; height: 100%"-->
+<br/>
+<br/>  
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+<!--/div-->

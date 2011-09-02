@@ -1,0 +1,4 @@
+if (CKEDITOR.instances['product_description_editor']) {
+delete CKEDITOR.instances['product_description_editor'] 
+};
+jQuery("#right_col").html("<%= escape_javascript(render(:partial => 'new_form'))%>");

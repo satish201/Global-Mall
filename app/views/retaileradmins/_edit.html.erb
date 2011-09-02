@@ -1,0 +1,29 @@
+<div style="height: 894px; overflow: scroll;">
+<%= form_for(@retaileradmin, :validat => true, :url => retaileradmin_path + ".js", :html => {:multipart => true, :target => 'frame'} ) do |f| %>
+ 
+  <div>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :confirm_password %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%#= f.label :persistence_token %><br />
+    <%#= f.text_field :persistence_token %>
+  </div>
+  
+    <%= f.submit "Update" %>
+  
+<% end %>
+<iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+</div>

@@ -1,0 +1,52 @@
+
+<% form_tag "/notify_gm", :method => :get do |f|% ->
+  <table>
+	<tr><div class="field">
+        <h2>About Your Business</h2>
+        </div>
+        
+        <div class="field">
+		<p>Type of business:<br><%= text_field_tag :businesstype %></p>
+		</div>
+		
+		<div class="field">
+		<p>Name of business:<br><%= text_field_tag :businessname %></p>
+		</div>
+		
+		<div class="field">		
+		<p>City:<br><%= text_field_tag :city %></p>
+		</div>
+		
+		<div class="field">
+		<p>State:<br><%= text_field_tag :state %></p>
+		</div>
+		
+		<div class="field">
+		<p>Street address:<br><%= text_field_tag :streetaddress %></p>
+		</div>
+		
+		<div class="field">
+		<p>ZIP code:<br><%= text_field_tag :zipcode %></p>
+		</div>
+		</tr>
+		
+  <div class="field">
+    <%= f.label "name" %>: <%= text_field_tag :name %>
+  </div>
+  <div class="field">
+    <%= f.label "description" %>: <%= text_area_tag :description %>
+  </div>
+  <div class="field">
+    <%= f.label "price" %>: <%= text_field_tag :price %>
+  </div>
+  <div class="field">
+  	<%= f.label "image" %>:<%= file_field_tag :image %>
+  </div>
+  <div class="field">
+  	<%= f.lable "message" %>: <%= text_area_tag :message %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Send E-mail" %>
+  </div>
+<% end %>
+

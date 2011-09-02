@@ -1,0 +1,2 @@
+module MallmanagerSessionsHelper
+end

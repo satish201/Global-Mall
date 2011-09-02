@@ -1,0 +1,70 @@
+<div style="height: 894px; overflow: scroll;">
+
+<%= form_tag '/notify_gm', :url => retailers_path + ".js", :html => {:multipart => true, :target => 'frame'} do |f| %>
+<table>
+	<tr>
+        <h2>About Your Business</h2>
+		<p>Type of business:<br></p>
+		<p><%= text_field_tag :businesstype %></p>
+		
+		<p>Name of business:<br></p>
+		<p><%= text_field_tag :businessname %></p>
+				
+		<p>City:<br></p>
+		<p><%= text_field_tag :city %></p>
+		
+		<p>State:<br></p>
+		<p><%= text_field_tag :state %></p>
+		
+		<p>Street address:<br></p>
+		<p><%= text_field_tag :streetaddress %></p>
+		
+		<p>ZIP code:<br></p>
+		<p><%= text_field_tag :zipcode %></p>
+		</tr>
+		<p>-----------------------------------------------------------------------------------------</p>
+		<tr>
+        <h2>Your Info</h2>
+		
+		<p>Your full name:<br></p>
+		<p><%= text_field_tag :fullname %></p>
+		
+        <p>Your email address:<br></p>
+		<p><%= text_field_tag :email %></p>
+		
+		<p>Your phone number:<br></p>
+		<p><%= text_field_tag :phonenumber %></p>
+        
+        <p>Upload a photo of your business :<br></p>
+		<p>inside: &nbsp;&nbsp;<%= file_field_tag :inside %></p>
+		<p>outside: <%= file_field_tag :outside %></p>
+		
+		<p>Website or facebook address of your business</p>
+		<p><%= text_field_tag :website %>		
+		</tr>
+		<p>-----------------------------------------------------------------------------------------</p>
+
+		<tr>
+        <h2>Product Info</h2>
+			
+		<p>Product Name:<br/></p>
+		<p><%= text_field_tag :name %><br/></p>
+		
+      	<p>Product Description:</p></br>
+      	<p><%= text_area_tag :description %></br></p>
+      	
+      	<p>Product Image:</p></br>
+      	<p><%= file_field_tag :image %></br></p>
+      	
+    	<p>Product Price:</br></p>
+    	<p><%= text_field_tag  :price %></p>
+    	
+    	<p>Message:</p></br>
+      	<p><%= text_area_tag :message %></br></p>
+        </tr>		
+    
+
+<%= submit_tag 'Submit' %>
+<% end %>
+         <iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+         <div/>

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @retaileradmin_session.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @retaileradmin_session.password %>
+</p>
+<p>
+	<b>Roll:</b>
+		<%= @retaileradmin_session.roll %>
+<p/>
+
+<%= link_to 'Edit', edit_retaileradmin_session_path(@retaileradmin_session) %> |
+<%= link_to 'Back', retaileradmin_sessions_path %>

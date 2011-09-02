@@ -1,0 +1,29 @@
+<div style="height: 894px; overflow: scroll;">
+
+<%= form_for(@product, :validate => true, :url => product_path + ".js", :html => {:multipart => true, :target => 'frame'} ) do |f|%>
+<div>
+   <%= f.label "name", "Name*" %><br/>
+   <%= f.text_field :name %>
+</div><br/>
+
+ <div>
+   <%= f.label "price", "Price*" %></br>
+   <%= f.text_field :price %>
+   </div><br/>
+
+<div class="field">
+    <%= f.label "description", "Description*" %><br />
+    <%= f.cktext_area ("description"), :height=>'300px' %>
+</div>
+
+ 
+
+  <%= ckeditor_ajax_script %>
+
+
+<%= f.submit "Submit" %>
+<% end %>
+<iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+
+</div>
+

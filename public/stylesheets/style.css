@@ -1,0 +1,154 @@
+body {
+	margin-top: 0px;
+	background-image: url(/images/bodybg.jpg);
+}
+.cont {
+	height: 850px;
+	width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(/images/contbg.jpg);
+	background-repeat: repeat-x;
+}
+.header {
+	float: left;
+	height: 176px;
+	width: 1024px;
+}
+.flashrobot {
+	float: left;
+	height: 176px;
+	width: 204px;
+}
+.logo {
+	float: left;
+	height: 176px;
+	width: 263px;
+	margin-right: 150px;
+	margin-left: 200px;
+}
+.middlecont {
+	float: left;
+	height: 455px;
+	width: 1024px;
+}
+.leftbar {
+	float: left;
+	height: 433px;
+	width: 204px;
+}
+.leftbarbutns {
+	float: left;
+	height: 40px;
+	width: 140px;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+
+.headerbutns {
+	float: right;
+	height: 45px;
+	width: 75px;
+	margin-right: 20px;
+	margin-top: 100px;
+}
+.leftbartextbox {
+	float: left;
+	height: 169px;
+	width: 172px;
+	background-image: url(/images/leftbarbox.png);
+	margin-top: 8px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+	color: #FFFFFF;
+	padding-top: 10px;
+	padding-left: 7px;
+	line-height: 23px;
+}
+.maintextpage {
+	background-image: url(/images/maintext.jpg);
+	float: left;
+	height: 403px;
+	width: 539px;
+	padding-top: 30px;
+	padding-left: 45px;
+}
+.leftsnsbox {
+	float: left;
+	height: 49px;
+	width: 39px;
+	margin-left: 15px;
+	margin-right: 9px;
+}
+.rightbar {
+	float: right;
+	height: 433px;
+	width: 231px;
+}
+.rightbarbox1 {
+	background-image: url(/images/page1_13.png);
+	float: right;
+	height: 217px;
+	width: 231px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+}
+.footer {
+	float: left;
+	height: 230px;
+	width: 1024px;
+}
+.footerline {
+	float: left;
+	height: 9px;
+	width: 1024px;
+}
+.footerbutnbox {
+	background-image: url(/images/page1_35.jpg);
+	height: 55px;
+	width: 1024px;
+}
+.footertextbox {
+	background-image: url(/images/page1_36.jpg);
+	float: left;
+	height: 166px;
+	width: 1024px;
+}
+.rightbarbox2 {
+	float: right;
+	height: 202px;
+	width: 231px;
+	background-image: url(/images/page1_25.jpg);
+}
+.footertextlast {
+	float: left;
+	height: 150px;
+	width: 188px;
+	margin-right: 4px;
+	margin-left: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding-top: 3px;
+	font-size: 15px;
+	padding-left: 3px;
+	color: #FFFFFF;
+}
+.mainpglogo {
+	float: left;
+	height: 107px;
+	width: 157px;
+	padding-right: 8px;
+	padding-left: 8px;
+	margin-bottom: 30px;
+}
+.mainpgbutn {
+	float: left;
+	height: 44px;
+	width: 151px;
+	margin-top: 6px;
+	margin-right: 180px;
+	margin-bottom: 6px;
+	margin-left: 180px;
+}

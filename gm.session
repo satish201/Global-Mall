@@ -1,0 +1,10 @@
+<!DOCTYPE webprojectsession>
+<webprojectsession>
+  <session usePreviewPrefix="0" previewPrefix="" >
+    <itemcursorpositions>
+      <item column="6" line="23" url="app/views/products/_product_index.html.erb" />
+      <item column="5" line="87" url="app/controllers/products_controller.rb" />
+      <item column="0" line="0" url="public/stylesheets/style.css" />
+    </itemcursorpositions>
+  </session>
+</webprojectsession>

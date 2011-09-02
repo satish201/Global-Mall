@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @mallmanager.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @mallmanager.email %>
+</p>
+
+<p>
+  <b>Crypted password:</b>
+  <%= @mallmanager.crypted_password %>
+</p>
+
+<p>
+  <b>Password salt:</b>
+  <%= @mallmanager.password_salt %>
+</p>
+
+<p>
+  <b>Persistence token:</b>
+  <%= @mallmanager.persistence_token %>
+</p>
+
+
+<%= link_to 'Edit', edit_mallmanager_path(@mallmanager) %> |
+<%= link_to 'Back', mallmanagers_path %>

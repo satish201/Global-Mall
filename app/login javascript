@@ -1,0 +1,17 @@
+<script type = "text/javascript">
+
+function loginValidation () {
+	radioRetailer = document.getElementById("user_session_roll_retailer");
+    radioManager = document.getElementById("user_session_roll_mall_manager");
+    if (radioRetailer.checked == false && radioManager.checked == false){
+    	alert('checked atleast Retailer or Mall Manager');
+    	return false;
+    }
+    else{
+    	return true;
+    }
+    
+}
+ 
+</script>
+

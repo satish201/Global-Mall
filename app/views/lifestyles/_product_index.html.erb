@@ -1,0 +1,16 @@
+
+<div class="right-cont-box">
+  
+  <%= form_tag('/check_product',:method=>'get', :remote=> true) do -%>
+  Select the Product: <%=select_tag "product_id", options_from_collection_for_select(@products, "id", "name")%>
+  <%#= link_to 'Go', check_state_url, :remote => true %>
+
+  <%= submit_tag 'Go' %>
+  <% end -%>
+
+
+</div>
+
+
+<div id="lifestyle-modify">
+</div>

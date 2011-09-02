@@ -1,0 +1,76 @@
+<div class="product-info">
+  <!--script>
+      function toggle(divid, id){
+        document.getElementById("st_introduction").style.display = "none"
+        document.getElementById("st_education").style.display = "none"
+        document.getElementById("st_economics").style.display = "none"
+        document.getElementById("st_politics").style.display = "none"
+        document.getElementById("st_culture").style.display = "none"
+        document.getElementById("intro").style.backgroundColor = "#cacaca"
+        document.getElementById("edu").style.backgroundColor = "#cacaca"
+        document.getElementById("eco").style.backgroundColor = "#cacaca"
+        document.getElementById("cul").style.backgroundColor = "#cacaca"
+        document.getElementById("poli").style.backgroundColor = "#cacaca"
+        document.getElementById(divid).style.display = "block" 
+        document.getElementById(id).style.backgroundColor = "#F8F8F8"
+        document.getElementById(id).style.color = "#00000"
+      }
+  </script-->
+
+
+
+  <br/>
+  <br/>
+  
+
+  
+  
+  <div class="search-map">
+
+    <%= form_tag search_path(:id => @product.id) do |f| -%>
+      <%= text_field_tag 'term', '', :class => "inputfield"%>
+       <%= submit_tag '', :class => "submitbut" %>
+    <% end -%>
+  <div class="product-nt">
+  <div class="product-thumb"><%=  image_tag @product.image.url(:thumb) if @product.image.url(:thumb)%></div> 
+  <div class="product-name"><h1><%= @product.name %></h1></div>
+ <%= @product.description.html_safe %>
+  </div>
+  </div>
+  
+  <br/>
+  <!--div class="info-box">
+    <div class="ib-top">
+    
+  </div-->
+  <div class="ib-bottom"
+    <!--div id="st_introduction" style="display: block">
+       <%#= @product.introduction.html_safe %>
+    </div>
+
+    <div id="st_education" style="display: none">
+        <%#= @product.education.html_safe %>
+    </div>
+
+    <div id="st_economics" style="display: none">
+        <%#= @product.economics.html_safe %>
+    </div-->
+
+    <div id="st_politics" style="display: none">
+      <%#= @product.politics.html_safe %>
+    </div>
+    
+    <div id="st_culture" style="display: none">
+      <%#= @product.culture.html_safe %>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+            <%#= render :partial => "/layouts/footer" %>
+</div>
+

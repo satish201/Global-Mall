@@ -1,0 +1,28 @@
+<div style="height: 894px; overflow: scroll;">
+<div class="right-cont-box">
+<table style="border: 1px solid #cacaca;" width="100%" align="left" cellpadding="0" cellspacing="0">
+  <tbody>
+    <% if @retaileradmins.blank? %>
+    No Retailer is available in your database !!!
+    <% else %>
+      <tr height="30px" align="left">
+      <th style="padding-left: 15px">ID</th>
+      <th style="padding-left: 15px">Users</th>
+        
+     
+    </tr>
+
+    <% @retaileradmins.each do |retaileradmin| %>
+      <tr>
+        <td style="padding-left: 15px" ><%= retaileradmin.id %></td>
+        <td><%= retaileradmin.username %></td>
+        <td><%= link_to "Edit", edit_retaileradmin_path(retaileradmin), :remote => true %>&nbsp;&nbsp;&nbsp; 
+        <%= link_to "Destroy", retaileradmin, :remote => true, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+</div>
+<iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+</div>

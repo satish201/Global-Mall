@@ -1,0 +1,24 @@
+       <div class="main-mid">
+            	<div class="mm-container">
+				<div class="cont-head">
+                  	<h2><%= @product.name %></h2>
+                     <!--p style="text-align: center;">Source: Translation Published :2011-3-29 of: Xu-Mei Zhang</p-->
+                </div>
+				<div class="content-page">
+                   
+			<%if @lifestyle.description.blank?%>
+                           <h4> No Description . </h4>
+                        <%else%>
+                            <h3> Description : </h3><br/>
+                            <%= @lifestyle.description.html_safe %>
+                        <%end%>
+                </div>
+                </div>
+       		 </div>
+
+
+
+
+          <%#= render :partial => "/layouts/footer" %>
+
+

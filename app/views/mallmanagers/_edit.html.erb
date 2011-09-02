@@ -1,0 +1,41 @@
+<div style="height: 894px; overflow: scroll;">
+
+<%= form_for(@mallmanager, :validate => true, :url => mallmanager_path + ".js", :html => {:multipart => true, :target => 'frame'} ) do |f| %>
+  <% if @mallmanager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mallmanager.errors.count, "error") %> prohibited this mallmanager from being saved:</h2>
+
+      <ul>
+      <% @mallmanager.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%#= f.label :persistence_token %><br />
+    <%#= f.text_field :persistence_token %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+<iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+	 </div>

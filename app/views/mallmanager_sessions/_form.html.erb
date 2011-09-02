@@ -1,0 +1,28 @@
+
+<%= form_for(@mallmanager_session) do |f| %>
+  <% if @mallmanager_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mallmanager_session.errors.count, "error") %> prohibited this mallmanager_session from being saved:</h2>
+
+      <ul>
+      <% @mallmanger_session.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div><br/>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+ <br/>
+  <div class="actions">
+    <%= f.submit "Login" %>
+    <!--input id="user_session_submit" type="submit" value="Login" name="commit"-->
+  </div>
+<% end %>

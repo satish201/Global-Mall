@@ -1,0 +1,19 @@
+
+<div >
+
+<%= form_for(@lifestyle, :url => lifestyles_path + ".js", :html => { :multipart => true, :target => 'frame' }) do |f| %>
+  <div id= "lifestyle_errors" style="display:none"></div>
+  
+  <%=f.hidden_field_tag 'product_id', @product.id  %>
+  <br/>
+    <%= f.label :Description %>
+    <%= f.cktext_area ("description"), :height=>'100px' %>
+    
+    
+
+            <%= ckeditor_ajax_script %>
+  <p><%= f.submit %></p>
+<% end %>
+  <iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+
+  </div>

@@ -1,0 +1,148 @@
+<script type="text/javascript">
+  
+   var lastMenu = "start";
+
+  function togglekeyboard(){
+    var ele = document.getElementById("virtkey") ;
+    if(ele.style.display == "none"){
+      ele.style.display = "block";
+      document.getElementById("keytoggle").innerHTML = "Hide Keyboard";
+    }
+    else {
+      ele.style.display = "none";
+      document.getElementById("keytoggle").innerHTML = "Show Keyboard";
+    } 
+  }  
+  
+  function toggleMenu(element){
+        if (lastMenu == "start"){
+                doSlide(element);
+                lastMenu = element;
+            }    
+        else if(lastMenu == element){
+            doSlide(element);
+            lastMenu = "start";
+            }
+        else{
+            doSlide(lastMenu);    
+            doSlide(element);
+            lastMenu = element;
+            }    
+
+}
+
+    function doSlide(id){
+      opac =0.0;	
+      timeToSlide = 40; // in milliseconds
+      obj = document.getElementById(id);
+      if(obj.style.display == "none"){ // if it's already hidden we slide it down
+        obj.style.visibility = "hidden";
+        obj.style.display = "block";
+        height = obj.offsetHeight;
+        obj.style.height="0px";
+        obj.style.visibility = "visible";
+        slideDown(0,obj,0,height,Math.ceil(height/timeToSlide));
+      } else {
+        slideUp(1,obj,Math.ceil(obj.offsetHeight/timeToSlide),obj.offsetHeight);
+      }
+    }
+	 
+    function slideDown(opac,obj,offset,full,px){
+	
+      if(offset < full){
+        mx = 0.04
+        obj.style.height = offset+"px";
+        offset=offset+px;
+        obj.style.opacity = opac;
+        opac=opac+mx;
+        setTimeout((function(){slideDown(opac,obj,offset,full,px);}),1);
+      } else {
+        obj.style.height = full+"px"; //If the data inside is updated on runtime you can use auto instead...
+      }
+    }
+	 
+    function slideUp(opac,obj,px,full){
+      if((obj.offsetHeight-px) > 0){
+        mx = 0.0125
+        obj.style.height = obj.offsetHeight-px+"px";
+        obj.style.opacity = opac;
+        opac=opac-mx;
+        setTimeout((function(){slideUp(opac,obj,px,full);}),1);
+      } else {
+        obj.style.height=full+"px"; // we reset the height if we were to slide it back down
+        obj.style.display = 'none';
+      }
+    }
+
+</script>
+
+    <div style="color: black; background-color:white; height: 100%"> 
+    	<div class="top-links" ></div>	
+    		
+        <h1>Admin Dashboard</h1>
+        <br/>
+
+        <div class="admin-pannel">
+        <table width="100%" height="965px" cellpadding="0">
+          <tr>
+            <td class="admin-left" valign="top" >
+              <div class= "admin-button">
+              	<ul>
+                <div class="ad-title">
+                  <a href="javascript:void(0);"  onclick="toggleMenu('product-menu');" ><h3>Products</h3></a>
+                    <li id="product-menu" style="display :none;" class="ad-title-sub" >
+                      <ul class="sub-link">
+                          <%= link_to 'Add Products', new_product_url, :remote => true %>
+                                                    
+                          <%= link_to 'Modify Products', products_url, :remote => true %>
+                     </ul>
+                    </li> 
+                </div>
+                <div class="ad-title">
+                  <a href="javascript:void(0);"  onclick="toggleMenu('retailer-menu');" ><h3>Retailers</h3></a>
+                     <li id="retailer-menu" style="display :none;" class="ad-title-sub" >
+                       <ul class="sub-link">
+                          <%= link_to 'Add Retailer', new_retaileradmin_url, :remote => true %>
+                                                    
+                          <%= link_to 'Modify Retailer', retaileradmins_url, :remote => true %>
+                       </ul>
+                     </li>
+              	</ul>
+             </div> 
+                  <div class="ad-title">
+                  <a href="javascript:void(0);"  onclick="toggleMenu('mallmanager-menu');" ><h3>Mall Managers</h3></a>
+                    <li id="mallmanager-menu" style="display :none;" class="ad-title-sub" >
+                      <ul class="sub-link">
+                          <%= link_to 'Add Mall Managers', new_mallmanager_url, :remote => true %>
+                                                    
+                          <%= link_to 'Modify Mall Managers', mallmanagers_url, :remote => true %>
+                     </ul>
+                    </li> 
+                </div>
+            </td>
+            <td valign="top" class="admin-right">  
+            <div id="virtkey" style="display: none; position: absolute; right: 28px; z-index: 3;">
+                    <iframe src="http://www.virtualkeyboard.ws/plugin.shtml" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="350" height="280" style="border:thin outset">
+                         Free virtual keyboard plugin from <a href="http://www.virtualkeyboard.ws" target="_blank">virtualkeyboard.ws</a>
+                    </iframe>
+                  </div>
+              <div>
+                    <a herf="javascript:void(0)" onclick="togglekeyboard()">
+                      <div id="keytoggle"> Keyboard </div>
+                    </a>
+                  </div>
+              <div id="right_col">
+              </div>
+            </td>
+          </tr>
+        </table>
+        </div>
+</div>
+
+</ul>
+        </div>
+             
+           
+
+
+                 

@@ -1,0 +1,17 @@
+<%= form_for(@mapview) do |f| %>
+  <% if @mapview.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mapview.errors.count, "error") %> prohibited this mapview from being saved:</h2>
+
+      <ul>
+      <% @mapview.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

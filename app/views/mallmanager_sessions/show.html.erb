@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @mallmanager_session.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @mallmanager_session.password %>
+</p>
+<p><p/>
+
+<%= link_to 'Edit', edit_mallmanager_session_path(@mallmanager_session) %> |
+<%= link_to 'Back', mallmanager_sessions_path %>

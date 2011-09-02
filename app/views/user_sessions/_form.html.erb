@@ -1,0 +1,32 @@
+
+<%= form_for(@user_session) do |f| %>
+  <% if @user_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_session.errors.count, "error") %> prohibited this user_session from being saved:</h2>
+
+      <ul>
+      <% @user_session.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div><br/>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <!--div class="field">
+  	<%# ["Retailer", "Mall Manager"].each do |c| %>
+  	<%#= f.radio_button :roll, c %><%#= c %>
+  	<%# end %>  
+  	</div--><br/>
+  <div class="actions">
+    <%= f.submit "Login" %>
+    <!--input id="user_session_submit" type="submit" value="Login" name="commit"-->
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+
+
+<div class="main-mid">
+  <div class="content">
+    <ul class="stateicons">
+        
+      <%@products.each do |product|%>
+          <%if product.lifestyle.nil? %>
+          <% else %>
+      
+                    	<li><a href="/lifestyles/<%= product.lifestyle.id %>">
+                            <% if product.image.url%>
+                                <%=  image_tag product.image.url(:thumb)%>
+                            <%else%>
+                                <!--img src="/images/icons/taxas.png" /-->  
+                            <%end%>
+                          </a><br />
+                        	<a href="/lifestyles/<%= product.lifestyle.id %>" ><%= product.name %></a>
+                        </li>
+          <%end%>
+        <%end%>
+                        
+    </ul>
+
+    <!--div id="paginate-area" style="float: right; left: 20px;">    <%#= paginate @states %></div-->
+  </div>
+</div>
+
+
+
+
+
+            <%#= render :partial => "/layouts/footer" %>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gm-Ecommerce</title>
+  <%= stylesheet_link_tag "user" %>
+  <!--%#= javascript_include_tag :defaults %-->
+  <%#= csrf_meta_tag %>
+  <!--%#= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %-->
+  <%= javascript_include_tag 'jquery.js', 'rails.validations.js' %>
+  <%= javascript_include_tag 'rails.js' %>
+  
+<%= javascript_include_tag :ckeditor %>
+
+  <!--link rel="stylesheet" type="text/css" href="/stylesheets/user.css" /-->
+  <script type="text/javascript" src="/javascripts/jquery-1.2.6.min.js"></script>
+  <script type="text/javascript" src="/javascripts/ui.core-1.5.3.js"></script>
+  <script type="text/javascript" src="/javascripts/ui.slider.js"></script>
+  <script type="text/javascript" src="/javascripts/iphone-unlock.js"></script>
+</head>
+
+
+
+
+
+<body>
+  <div class="liks-parent"> 
+    
+ 	<div class="admin-links">
+  	     <% if current_user %>
+  	        <!--%# current_user.username == "admin"%-->
+            
+            <%= link_to "Edit Profile", edit_user_path(current_user.id)%>
+             <%= link_to "Admin", '/admin', :class=>"a-link"%> 
+        <%= link_to "Logout", :logout %>
+            
+        <% else %>
+        <!--%#= link_to "Register", new_user_path%-->
+        
+  <% end %>
+  </div> 
+  </div>
+       <div id="wrapper" width="100%">
+    	<div class="container">
+    		
+      <%  #coding: utf-8 %>    
+             
+<%= yield %>
+        
+        </div>
+				                <div class="main-but">
+                	<!--a href="/"><img src="/images/but.png" alt="main-button" /></a-->
+        		</div>
+		<div class="fotter">
+			<!--p style="float:left;">Copyright © 2011 OL. All rights reserved.</p>
+			<p style="float:right;">About us | Contact us | Online Registration | Technical support: Austrian Line Technology</p-->
+			
+		</div>
+    </div>
+
+</body>
+</html>

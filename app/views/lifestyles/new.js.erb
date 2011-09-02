@@ -1,0 +1,6 @@
+if (CKEDITOR.instances['lifestyle_description_editor']) {
+delete CKEDITOR.instances['lifestyle_description_editor'] 
+};
+
+
+$("#lifestyle-modify").html("<%= escape_javascript(render(:partial => 'new_form'))%>");
