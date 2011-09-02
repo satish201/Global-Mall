@@ -1,7 +1,7 @@
 class UserSessionsController < ApplicationController
   layout 'user'
   
-   before_filter :require_user_admin, :except=>["new", "create"]
+   #before_filter :require_user_admin, :except=>["new", "create"]
     
   # GET /user_sessions/new
   # GET /user_sessions/new.xml
